@@ -5,6 +5,15 @@ function AHeader() {
         <div className="container mx-auto px-4 flex justify-center items-center h-16">
             <nav className="flex space-x-6">
                 <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                        `text-gray-600 ${isActive ? "text-blue-950 font-extrabold" : ""
+                        }`
+                    }
+                >
+                    Back To Home
+                </NavLink>
+                <NavLink
                     to="/profile"
                     className={({ isActive }) =>
                         `text-gray-600 ${isActive ? "text-blue-950 font-extrabold" : ""
