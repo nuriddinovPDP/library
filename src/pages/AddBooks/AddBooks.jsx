@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { API } from "../../utils/config";
+import { Link } from "react-router-dom";
 
 const AddBook = () => {
     const [file, setFile] = useState(null);
@@ -57,6 +58,9 @@ const AddBook = () => {
     return (
         <div className="flex flex-col lg:flex-row h-auto lg:h-screen">
             <div className="w-full lg:w-1/2 bg-[#F3F3F3] flex flex-col items-center justify-center p-6">
+             <Link className='text-[20px] font-[700] text-left mr-[550px] absolute top-[10px]' to={"/"}>
+      Home
+      </Link>
                 <div className="w-[200px] sm:w-[300px] h-[300px] sm:h-[400px] bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center">
                     {preview && (
                         <img
